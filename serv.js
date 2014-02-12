@@ -22,6 +22,11 @@ app.get('/', function(req, res){
   res.send('Proper HTTP response');
 });
 
+app.post('/', function(req, res){
+  console.log(req.body);
+  res.send('Proper HTTP response');
+});
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express HTTP server listening on port ' + app.get('port'));
 });
